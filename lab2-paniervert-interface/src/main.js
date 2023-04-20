@@ -3,6 +3,7 @@ import { createApp } from 'vue'
 createApp({
     data: function() {
         return {
+            // Le catalogue des produits disponibles:
             products: [
                 {
                     id: 'chaise',
@@ -54,6 +55,7 @@ createApp({
                     image: 'products/panier.jpg'
                 }
             ],
+            // Les produits ajoutés au panier, avec leur quantité:
             cart: [
                 {
                     id: 'plante',

@@ -18,6 +18,7 @@
     <div id="app">
       <div class="container">
         <div id="product-list">
+          <h2>Catalogue de produits</h2>
           <div class="product" v-for="product in products" :key="product.id">
             <img v-bind:src="product.image" />
             <div class="product-info">
@@ -40,16 +41,13 @@
                 <div class="cart-item-name">Plante verte</div>
                 <div class="cart-item-price">49.95</div>
                 <div class="cart-item-quantity"><span>Quantité:</span>
-                  <!-- Exercice 1.3.1 : lier la valeur de l'élément input au champ quantity des items (ceux dans le champ cart)-->
-                  <input type="number" class="quantity" value="1" min="1">
-                  <!-- Exercice 1.3.2 : faire fonctionner les boutons d'incrément et de décrément -->
-                  <div class="quantity-button quantity-up">+</div>
-                  <div class="quantity-button quantity-down">-</div>
+                  <!-- Exercice 1.2.1 : lier la valeur de l'élément input au champ quantity des items (ceux dans le champ cart)-->
+                  <input type="number" class="quantity" value="1">
                 </div>
-                <!-- Exercice 1.3.3 : calculer le total pour l'item en fonction du champ quantity -->
+                <!-- Exercice 1.2.2 : calculer le total pour l'item en fonction du champ quantity -->
                 <div class="cart-item-total">Total: 49.95</div>
               </div>
-              <!-- Exercice 1.2 : faire en sorte que ce bouton retire l'article courant du panier -->
+              <!-- Exercice 1.3 : faire en sorte que ce bouton retire l'article courant du panier -->
               <div class="cart-item-remove">
                 <button>Retirer</button>
               </div>
@@ -63,8 +61,8 @@
           <button>Passer à la caisse</button>
         </div>
       </div>
+    </div>
   </main>
-  </div>
 
   <script type="module" src="/src/main.js"></script>
 </body>
