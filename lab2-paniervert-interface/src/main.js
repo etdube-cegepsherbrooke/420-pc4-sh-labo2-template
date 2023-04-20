@@ -78,9 +78,20 @@ createApp({
     },
     methods: {
         addToCart: function(product) {
+            // On instancie un nouvel objet pour éviter que "cart" contienne une référence à l'objet
+            // provenant du tableau products
+            const cartItem = {
+                id: product.id,
+                name: product.name,
+                price: product.price,
+                desc: product.desc,
+                image: product.image,
+                quantity: 1 // on initialise la quantité à 1
+            };
+
             // Exercice 1.5 : faire en sorte que l'ajout d'un produit au panier incrémente
             // la quantité si le produit est déjà présent dans le panier.
-            cart.push(product);
+            this.cart.push(cartItem);
         }
     }
 }).mount('#app')

@@ -27,7 +27,7 @@
               <div class="product-description">{{ product.desc }}</div>
             </div>
             <div class="product-add-to-cart">
-              <button>Ajouter au panier</button>
+              <button v-on:click="addToCart(product)">Ajouter au panier</button>
             </div>
           </div>
         </div>
